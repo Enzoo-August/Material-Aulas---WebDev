@@ -1,4 +1,9 @@
+import { Outlet } from "react-router-dom";
+import Card from "./components/Card";
 import Navbar from "./components/NavBar";
+import Section from "./components/Section";
+
+
 
 export default function App() {
   return (
@@ -6,6 +11,7 @@ export default function App() {
       <Navbar />
       <main className="p-6">
         <p className="text-center">Lista de Repositórios </p>
+      <Outlet /> 
       </main>
     </div>
   );
