@@ -17,7 +17,7 @@ export default function Home() {
       <h1 className="text-3xl font-bold text-center mb-8">
         GitHub Repositories Explorer
       </h1>
-      <Section>
+      <Section titulo="ClashRoyale">
         {reactRepos.map((repositores) => {
           return (
             <Card {...repositores} />
