@@ -50,14 +50,16 @@ export default function Home() {
       </SectionContainer>
 
       <SectionContainer title="Roupas Masculinas">
+        
         {mensClothing.map((product) => (
+          
           <ProductCard key={product.id} {...product} />
         ))}
       </SectionContainer>
       <SectionContainer title="Queridinhos dos Clientes">
         {queridinhos.length > 0 ? (
           queridinhos
-            .sort((a, b) => (b.rating.rate) - (a.rating.rate) || (b.rating.count) - (a.rating.count))
+            .sort((a, b) => (b.rating.rate) - (a.rating.rate) || (b.rating.count) - (a.rating.count) || (a.price) - (b.price)) 
             .map((product) => (
             <ProductCard key={product.id} {...product} />
           ))
@@ -79,6 +81,7 @@ export default function Home() {
       <SectionContainer title="Jaquetas e Casacos">
         {allProducts
           .filter((product) => product.title.toLowerCase().includes("jacket") || product.title.toLowerCase().includes("coat") ||  product.description.toLowerCase().includes("jacket") || product.description.toLowerCase().includes("coat"))
+          .sort((a, b) => a.price - b .price)
           .map((product) => (
             <ProductCard key={product.id} {...product} />
           ))}

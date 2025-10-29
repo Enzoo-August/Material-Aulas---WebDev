@@ -4,6 +4,8 @@ import ProductDetails from "../pages/ProductDetails";
 import Profile from "../pages/Profile";
 import Cart from "../pages/Cart";
 import Layout from "../Layout";
+import SearchResults from "../pages/SearchResults";
+import SearchPageWelcome from "../pages/SearchPageWelcome";
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +16,8 @@ export const router = createBrowserRouter([
       { path: "profile", element: <Profile /> },
       { path: "cart", element: <Cart/> },
       { path: "product/:id", element: <ProductDetails /> },
+      {path: "searchWelcome", element: <SearchPageWelcome />},
+      {path: "searchResults/:termoPesquisa", element: <SearchResults />},
     ],
   },
 ]);
